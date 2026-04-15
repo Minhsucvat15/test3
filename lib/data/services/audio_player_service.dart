@@ -1,4 +1,5 @@
 import 'package:just_audio/just_audio.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/song_model.dart';
 
 enum RepeatMode { off, one, all }
@@ -27,6 +28,23 @@ class AudioPlayerService {
       return _queue[index];
     }
     return null;
+  }
+
+  // 🔥 LOAD TIẾN TRÌNH
+  Future<void> restoreLastSession(List<SongModel> songs) async {
+    final prefs = await SharedPreferences.getInstance();
+
+    final savedPath = prefs.getString("last_song");
+    final savedPos = prefs.getInt("last_position") ?? 0;
+
+    if (savedPath == null) return;
+
+    final index = songs.indexWhere((s) => s.data == savedPath);
+    if (index == -1) return;
+
+    await setQueue(songs, initialIndex: index);
+
+    await player.seek(Duration(milliseconds: savedPos));
   }
 
   Future<void> setQueue(List<SongModel> songs, {int initialIndex = 0}) async {
@@ -65,7 +83,18 @@ class AudioPlayerService {
 
       await player.play();
 
-      // 🔥 AUTO NEXT + REPEAT
+      // 🔥 AUTO SAVE PROGRESS
+      player.positionStream.listen((pos) async {
+        final prefs = await SharedPreferences.getInstance();
+        final song = currentSong;
+
+        if (song != null) {
+          prefs.setString("last_song", song.data ?? "");
+          prefs.setInt("last_position", pos.inMilliseconds);
+        }
+      });
+
+      // 🔥 AUTO NEXT
       player.playerStateStream.listen((state) {
         if (state.processingState == ProcessingState.completed) {
           _handleNext();
@@ -77,31 +106,23 @@ class AudioPlayerService {
   }
 
   Future<void> playSong(SongModel song) async {
-    try {
-      final index = _queue.indexWhere((item) => item.id == song.id);
+    final index = _queue.indexWhere((item) => item.id == song.id);
 
-      if (index != -1) {
-        await player.seek(Duration.zero, index: index);
-        _currentIndex = index;
-        await player.play();
-        return;
-      }
-
-      await setQueue([song], initialIndex: 0);
-    } catch (e) {
-      print('ERROR playSong(single): $e');
+    if (index != -1) {
+      await player.seek(Duration.zero, index: index);
+      _currentIndex = index;
+      await player.play();
+      return;
     }
+
+    await setQueue([song], initialIndex: 0);
   }
 
   Future<void> playSongAt(List<SongModel> songs, int index) async {
-    try {
-      if (songs.isEmpty) return;
-      if (index < 0 || index >= songs.length) return;
+    if (songs.isEmpty) return;
+    if (index < 0 || index >= songs.length) return;
 
-      await setQueue(songs, initialIndex: index);
-    } catch (e) {
-      print('ERROR playSongAt: $e');
-    }
+    await setQueue(songs, initialIndex: index);
   }
 
   Future<void> play() async => player.play();
@@ -119,7 +140,6 @@ class AudioPlayerService {
     await player.play();
   }
 
-  // 🔥 NEW
   void toggleShuffle() => shuffle = !shuffle;
 
   void toggleRepeat() {

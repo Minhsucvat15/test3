@@ -1,16 +1,47 @@
+import 'dart:convert';
 import 'dart:io';
+import 'package:http/http.dart' as http;
+
 import '../models/song_model.dart';
 
 class MediaQueryService {
+  // Android Emulator -> gọi máy thật qua 10.0.2.2
+  final String apiUrl = "http://10.0.2.2:3001/songs";
 
   Future<List<SongModel>> getSongsSafe() async {
     try {
       List<SongModel> songs = [];
 
-      // 🔥 ONLINE DEMO
+      // 1. LOAD ONLINE TỪ API THẬT
+      try {
+        final res = await http.get(Uri.parse(apiUrl));
+
+        if (res.statusCode == 200) {
+          final List data = jsonDecode(res.body);
+
+          for (var item in data) {
+            songs.add(
+              SongModel(
+                id: item['id'] ?? 0,
+                title: item['title'] ?? 'No title',
+                artist: item['artist'] ?? 'Unknown',
+                data: item['url'],
+                duration: null,
+                albumId: null,
+              ),
+            );
+          }
+        } else {
+          print("API STATUS ERROR: ${res.statusCode}");
+        }
+      } catch (e) {
+        print("API ERROR: $e");
+      }
+
+      // 2. ONLINE DEMO CŨ
       songs.addAll([
         SongModel(
-          id: 1,
+          id: 1001,
           title: "SoundHelix 1",
           artist: "Online",
           data: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
@@ -18,7 +49,7 @@ class MediaQueryService {
           albumId: null,
         ),
         SongModel(
-          id: 2,
+          id: 1002,
           title: "SoundHelix 2",
           artist: "Online",
           data: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
@@ -27,7 +58,7 @@ class MediaQueryService {
         ),
       ]);
 
-      // 🔥 OFFLINE (đa nền tảng)
+      // 3. OFFLINE GIỮ NGUYÊN
       Directory? dir;
 
       if (Platform.isAndroid) {
@@ -39,7 +70,7 @@ class MediaQueryService {
       if (dir != null && dir.existsSync()) {
         final files = dir.listSync(recursive: true);
 
-        int id = 100;
+        int id = 2000;
 
         for (var file in files) {
           if (file is File && file.path.toLowerCase().endsWith(".mp3")) {
@@ -65,5 +96,6 @@ class MediaQueryService {
   }
 
   Future<bool> requestPermission() async => true;
+
   Future<void> openSetting() async {}
 }

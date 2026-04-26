@@ -1,0 +1,82 @@
+{
+  "version": 2,
+  "_note": "Audio URL hiện đang dùng SoundHelix demo. Khi có file mp3 nhạc Việt thật, thay field 'url' của từng bài.",
+
+  "categories": [
+    {"id": "vpop", "name": "Vpop", "color": "0xFFFF6B9D"},
+    {"id": "bolero", "name": "Bolero", "color": "0xFFFFC36B"},
+    {"id": "indie", "name": "Indie", "color": "0xFF6C5CE7"},
+    {"id": "rap", "name": "Rap Việt", "color": "0xFFD63031"},
+    {"id": "folk", "name": "Dân ca", "color": "0xFF55EFC4"},
+    {"id": "lofi", "name": "Lo-Fi", "color": "0xFF0984E3"},
+    {"id": "edm", "name": "EDM", "color": "0xFF00B894"}
+  ],
+
+  "songs": [
+    {"id":"s1","title":"Phố Đêm Hà Nội","artist":"Hà My","album":"Đêm Thủ Đô","category":"vpop","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3","cover":"https://picsum.photos/seed/vn1/600/600","color":"0xFFFF6B9D","playCount":284512},
+    {"id":"s2","title":"Mùa Đông Sài Gòn","artist":"Quỳnh Anh","album":"Sài Gòn Của Tôi","category":"vpop","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3","cover":"https://picsum.photos/seed/vn2/600/600","color":"0xFFFF7675","playCount":192480},
+    {"id":"s3","title":"Tiếng Mưa Trên Phố","artist":"Lam Trường","album":"Phố Cũ","category":"bolero","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3","cover":"https://picsum.photos/seed/vn3/600/600","color":"0xFFFFC36B","playCount":421033},
+    {"id":"s4","title":"Em Của Ngày Xưa","artist":"Mỹ Tâm","album":"Hồi Ức","category":"vpop","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3","cover":"https://picsum.photos/seed/vn4/600/600","color":"0xFFFD79A8","playCount":985210},
+    {"id":"s5","title":"Lặng Yên","artist":"Vũ.","album":"Bảo Tàng Của Nuối Tiếc","category":"indie","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3","cover":"https://picsum.photos/seed/vn5/600/600","color":"0xFF6C5CE7","playCount":712334},
+    {"id":"s6","title":"Giấc Mơ Nhỏ","artist":"Ngọt","album":"Khi Ta Hai Lăm","category":"indie","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3","cover":"https://picsum.photos/seed/vn6/600/600","color":"0xFFA29BFE","playCount":556122},
+    {"id":"s7","title":"Phía Bên Kia Đại Dương","artist":"Cá Hồi Hoang","album":"Hiệu Ứng","category":"indie","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3","cover":"https://picsum.photos/seed/vn7/600/600","color":"0xFF74B9FF","playCount":340912},
+    {"id":"s8","title":"Đường Về Quê","artist":"Đan Nguyên","album":"Quê Hương","category":"bolero","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3","cover":"https://picsum.photos/seed/vn8/600/600","color":"0xFFE17055","playCount":1102340},
+    {"id":"s9","title":"Lý Cây Đa","artist":"NSƯT Thanh Ngoan","album":"Dân Ca Bắc Bộ","category":"folk","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3","cover":"https://picsum.photos/seed/vn9/600/600","color":"0xFF55EFC4","playCount":78234},
+    {"id":"s10","title":"Bèo Dạt Mây Trôi","artist":"Hồng Nhung","album":"Dân Ca Việt","category":"folk","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3","cover":"https://picsum.photos/seed/vn10/600/600","color":"0xFF00B894","playCount":134812},
+    {"id":"s11","title":"Trống Cơm","artist":"Tốp Ca","album":"Dân Ca Việt","category":"folk","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3","cover":"https://picsum.photos/seed/vn11/600/600","color":"0xFF26DE81","playCount":62410},
+    {"id":"s12","title":"Hà Nội Mùa Vắng Những Cơn Mưa","artist":"Trung Quân","album":"Khúc Giao Mùa","category":"vpop","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3","cover":"https://picsum.photos/seed/vn12/600/600","color":"0xFFFAB1A0","playCount":472019},
+    {"id":"s13","title":"Hồ Trên Núi","artist":"Mỹ Linh","album":"Tóc Ngắn","category":"vpop","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3","cover":"https://picsum.photos/seed/vn13/600/600","color":"0xFF0984E3","playCount":221045},
+    {"id":"s14","title":"Đêm Lao Xao","artist":"Hà Anh Tuấn","album":"See Sing Share","category":"indie","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3","cover":"https://picsum.photos/seed/vn14/600/600","color":"0xFF8E44AD","playCount":1452301},
+    {"id":"s15","title":"Lofi Sài Gòn","artist":"Đen","album":"Show Của Đen","category":"lofi","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3","cover":"https://picsum.photos/seed/vn15/600/600","color":"0xFF74B9FF","playCount":2103520},
+    {"id":"s16","title":"Mưa Phố Núi","artist":"Tóc Tiên","album":"Vũ Trụ","category":"vpop","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3","cover":"https://picsum.photos/seed/vn16/600/600","color":"0xFFFD79A8","playCount":611234},
+    {"id":"s17","title":"Đường Tới Vinh Quang","artist":"Bức Tường","album":"Vô Hình","category":"rap","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3","cover":"https://picsum.photos/seed/vn17/600/600","color":"0xFFD63031","playCount":3210442},
+    {"id":"s18","title":"Hà Nội Ơi","artist":"Hồng Nhung","album":"Khúc Mặt Trời","category":"bolero","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3","cover":"https://picsum.photos/seed/vn18/600/600","color":"0xFFFFA502","playCount":156102},
+    {"id":"s19","title":"Người Lạ Ơi","artist":"Karik","album":"Khu Tao Sống","category":"rap","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3","cover":"https://picsum.photos/seed/vn19/600/600","color":"0xFFE84393","playCount":4820103},
+    {"id":"s20","title":"Saigon Beat","artist":"Touliver","album":"Beat Vietnam","category":"edm","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3","cover":"https://picsum.photos/seed/vn20/600/600","color":"0xFF00B894","playCount":829511},
+    {"id":"s21","title":"Hè Phía Sau","artist":"Lê Cát Trọng Lý","album":"Vui","category":"indie","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3","cover":"https://picsum.photos/seed/vn21/600/600","color":"0xFFFDCB6E","playCount":204800},
+    {"id":"s22","title":"Tự Nhiên","artist":"Min","album":"On The Way","category":"vpop","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3","cover":"https://picsum.photos/seed/vn22/600/600","color":"0xFFFF6B6B","playCount":1320955},
+    {"id":"s23","title":"Mưa Đêm","artist":"Ngọc Ánh","album":"Khoảng Lặng","category":"bolero","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3","cover":"https://picsum.photos/seed/vn23/600/600","color":"0xFFE67E22","playCount":98230},
+    {"id":"s24","title":"Lo-Fi Mưa Đà Lạt","artist":"Onionn","album":"Lofi Việt Vol.1","category":"lofi","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3","cover":"https://picsum.photos/seed/vn24/600/600","color":"0xFF3498DB","playCount":2814000},
+    {"id":"s25","title":"Phượng Hồng","artist":"Vũ Cát Tường","album":"Vũ Trụ Song Song","category":"vpop","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3","cover":"https://picsum.photos/seed/vn25/600/600","color":"0xFFFF9FF3","playCount":760123},
+    {"id":"s26","title":"Cây Đàn Sinh Viên","artist":"Trần Tiến","album":"Du Ca","category":"folk","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3","cover":"https://picsum.photos/seed/vn26/600/600","color":"0xFF26DE81","playCount":48230},
+    {"id":"s27","title":"Mưa Trên Phố Huế","artist":"Khánh Ly","album":"Tình Khúc","category":"bolero","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3","cover":"https://picsum.photos/seed/vn27/600/600","color":"0xFFB59410","playCount":211004},
+    {"id":"s28","title":"Đại Đoàn Kết","artist":"Tốp Ca","album":"Cách Mạng","category":"folk","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3","cover":"https://picsum.photos/seed/vn28/600/600","color":"0xFFD63031","playCount":29340},
+    {"id":"s29","title":"Underground Sài Gòn","artist":"Wowy","album":"SG Underground","category":"rap","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3","cover":"https://picsum.photos/seed/vn29/600/600","color":"0xFF8E44AD","playCount":1840912},
+    {"id":"s30","title":"Drop EDM Vietnam","artist":"SlimV","album":"VN Beat 2024","category":"edm","url":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3","cover":"https://picsum.photos/seed/vn30/600/600","color":"0xFF1ED760","playCount":923420}
+  ],
+
+  "featured": [
+    {"id":"f1","title":"Vpop tối nay","subtitle":"Hot 30 bài đang trending","image":"https://picsum.photos/seed/feat1/800/500","category":"vpop"},
+    {"id":"f2","title":"Bolero quê hương","subtitle":"Nhẹ nhàng cho buổi chiều","image":"https://picsum.photos/seed/feat2/800/500","category":"bolero"},
+    {"id":"f3","title":"Indie Việt 2024","subtitle":"Những giọng ca mới nhất","image":"https://picsum.photos/seed/feat3/800/500","category":"indie"},
+    {"id":"f4","title":"Rap Việt cypher","subtitle":"Flow đỉnh cao","image":"https://picsum.photos/seed/feat4/800/500","category":"rap"}
+  ],
+
+  "mixes": [
+    {"id":"m1","title":"Mix Vpop","subtitle":"Đậm chất Việt","image":"https://picsum.photos/seed/mix1/400/400","color":"0xFFFF6B9D","songIds":["s1","s2","s4","s12","s16","s22","s25"]},
+    {"id":"m2","title":"Mix Indie","subtitle":"Chill và sâu lắng","image":"https://picsum.photos/seed/mix2/400/400","color":"0xFF6C5CE7","songIds":["s5","s6","s7","s14","s21"]},
+    {"id":"m3","title":"Mix Bolero","subtitle":"Hồi ức xưa","image":"https://picsum.photos/seed/mix3/400/400","color":"0xFFFFC36B","songIds":["s3","s8","s18","s23","s27"]},
+    {"id":"m4","title":"Mix Rap Việt","subtitle":"Flow cháy","image":"https://picsum.photos/seed/mix4/400/400","color":"0xFFD63031","songIds":["s17","s19","s29"]},
+    {"id":"m5","title":"Mix Lo-Fi","subtitle":"Học bài & thư giãn","image":"https://picsum.photos/seed/mix5/400/400","color":"0xFF0984E3","songIds":["s15","s24"]},
+    {"id":"m6","title":"Mix Dân Ca","subtitle":"Quê hương ba miền","image":"https://picsum.photos/seed/mix6/400/400","color":"0xFF55EFC4","songIds":["s9","s10","s11","s26","s28"]}
+  ],
+
+  "suggestions": [
+    {"id":"sg1","title":"Sáng cà phê","subtitle":"Acoustic Việt nhẹ nhàng","image":"https://picsum.photos/seed/sg1/400/400","color":"0xFFE17055","songIds":["s5","s6","s7","s21","s14"]},
+    {"id":"sg2","title":"Đường về nhà","subtitle":"Bolero và quê hương","image":"https://picsum.photos/seed/sg2/400/400","color":"0xFFFFA502","songIds":["s3","s8","s18","s27"]},
+    {"id":"sg3","title":"Cuối tuần thư giãn","subtitle":"Lo-fi và ambient","image":"https://picsum.photos/seed/sg3/400/400","color":"0xFF0984E3","songIds":["s15","s24","s5"]},
+    {"id":"sg4","title":"Tập gym sung","subtitle":"Rap Việt + EDM","image":"https://picsum.photos/seed/sg4/400/400","color":"0xFF8E44AD","songIds":["s17","s19","s20","s29","s30"]},
+    {"id":"sg5","title":"Hoài niệm","subtitle":"Nhạc dân ca và truyền thống","image":"https://picsum.photos/seed/sg5/400/400","color":"0xFF55EFC4","songIds":["s9","s10","s11","s26","s28"]}
+  ],
+
+  "albums": [
+    {"id":"al1","title":"Bảo Tàng Của Nuối Tiếc","artist":"Vũ.","year":2019,"cover":"https://picsum.photos/seed/al1/500/500","color":"0xFF6C5CE7","songIds":["s5"]},
+    {"id":"al2","title":"Khi Ta Hai Lăm","artist":"Ngọt","year":2017,"cover":"https://picsum.photos/seed/al2/500/500","color":"0xFFA29BFE","songIds":["s6"]},
+    {"id":"al3","title":"Hiệu Ứng","artist":"Cá Hồi Hoang","year":2018,"cover":"https://picsum.photos/seed/al3/500/500","color":"0xFF74B9FF","songIds":["s7"]},
+    {"id":"al4","title":"See Sing Share","artist":"Hà Anh Tuấn","year":2017,"cover":"https://picsum.photos/seed/al4/500/500","color":"0xFF8E44AD","songIds":["s14"]},
+    {"id":"al5","title":"Show Của Đen","artist":"Đen","year":2020,"cover":"https://picsum.photos/seed/al5/500/500","color":"0xFF74B9FF","songIds":["s15"]},
+    {"id":"al6","title":"Vũ Trụ Song Song","artist":"Vũ Cát Tường","year":2022,"cover":"https://picsum.photos/seed/al6/500/500","color":"0xFFFF9FF3","songIds":["s25"]},
+    {"id":"al7","title":"Khu Tao Sống","artist":"Karik","year":2019,"cover":"https://picsum.photos/seed/al7/500/500","color":"0xFFE84393","songIds":["s19"]},
+    {"id":"al8","title":"Dân Ca Bắc Bộ","artist":"NSƯT Thanh Ngoan","year":2010,"cover":"https://picsum.photos/seed/al8/500/500","color":"0xFF55EFC4","songIds":["s9","s11"]}
+  ]
+}
